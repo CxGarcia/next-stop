@@ -1,0 +1,28 @@
+{
+  "root": "apps/next-stop-e2e",
+  "sourceRoot": "apps/next-stop-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/next-stop-e2e/cypress.json",
+        "devServerTarget": "next-stop:serve"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "next-stop:serve:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/next-stop-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["next-stop"]
+}

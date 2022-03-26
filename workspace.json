@@ -1,0 +1,7 @@
+{
+  "version": 2,
+  "projects": {
+    "next-stop": "apps/next-stop",
+    "next-stop-e2e": "apps/next-stop-e2e"
+  }
+}
