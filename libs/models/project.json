@@ -1,0 +1,48 @@
+{
+  "root": "libs/models",
+  "sourceRoot": "libs/models/src",
+  "projectType": "library",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/models/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/models"],
+      "options": {
+        "jestConfig": "libs/models/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "migrate": {
+      "executor": "@nrwl/workspace:run-commands",
+      "outputs": [],
+      "options": {
+        "command": "prisma migrate dev",
+        "cwd": "libs/models"
+      }
+    },
+    "push": {
+      "executor": "@nrwl/workspace:run-commands",
+      "outputs": [],
+      "options": {
+        "command": "prisma db push",
+        "cwd": "libs/models"
+      }
+    },
+    "gen-client": {
+      "executor": "@nrwl/workspace:run-commands",
+      "outputs": [],
+      "options": {
+        "command": "prisma generate",
+        "cwd": "libs/models"
+      }
+    }
+  },
+
+  "tags": []
+}
