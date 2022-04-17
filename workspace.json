@@ -1,6 +1,7 @@
 {
   "version": 2,
   "projects": {
+    "components": "libs/components",
     "models": "libs/models",
     "next-stop": "apps/next-stop",
     "next-stop-e2e": "apps/next-stop-e2e"

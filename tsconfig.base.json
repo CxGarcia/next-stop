@@ -15,6 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@next-stop/components": ["libs/components/src/index.ts"],
       "@next-stop/models": ["libs/models/src/index.ts"]
     }
   },

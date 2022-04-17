@@ -1,3 +1,6 @@
+import { IconWrap } from '@next-stop/components';
+import { IoMdMenu } from 'react-icons/io';
+
 export function Index() {
   /*
    * Replace the elements below with your own.
@@ -30,6 +33,10 @@ export function Index() {
               Learn more
             </a>
           </div>
+
+          <IconWrap>
+            <IoMdMenu />
+          </IconWrap>
         </div>
       </div>
     </div>
